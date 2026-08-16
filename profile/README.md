@@ -21,8 +21,6 @@ We are early, and quiet about what is in progress. The standard is not a secret 
 
 <a href="https://cal.com/jocks-studio/intro"><img alt="Schedule a call" src="https://raw.githubusercontent.com/jocks-studio/.github/main/profile/assets/btn-schedule.png" height="40"></a>&nbsp;<a href="mailto:hello@jocks.studio"><img alt="Email hello@jocks.studio" src="https://raw.githubusercontent.com/jocks-studio/.github/main/profile/assets/btn-email.png" height="40"></a>&nbsp;<a href="https://wa.me/4916095021107"><img alt="WhatsApp +49 160 95021107" src="https://raw.githubusercontent.com/jocks-studio/.github/main/profile/assets/btn-whatsapp.png" height="40"></a>
 
-Mornings, 10:00–13:00 CET. Thirty minutes, and the booking form asks what the call is for.
-
 ---
 
 <sub>Studio Jocks UG (haftungsbeschränkt) · Castrop-Rauxel, Germany · Incorporation 1 October 2026</sub>
