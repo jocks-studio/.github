@@ -37,10 +37,11 @@ Verified against the live rendering pipeline. These are why the contact buttons
 are built the way they are:
 
 - **`tel:` links are stripped**, in HTML anchors and markdown links alike. Only
-  `https:` and `mailto:` survive, so the call button carries the number on its
-  face rather than dialling.
-- **A bare image is auto-wrapped in a link to its own raw file.** The call button
-  anchors to `#contact` to prevent that.
+  `https:` and `mailto:` survive. That is why the call button is a Cal.com
+  scheduling link rather than a dial link — a `tel:` button would render as a
+  dead image.
+- **A bare image is auto-wrapped in a link to its own raw file.** Any button
+  image must sit inside an `<a>`, or clicking it opens the PNG.
 - **`<picture>` cannot go inside a link.** GitHub rewrites it to
   `<themed-picture>` and hoists it out of the anchor, silently dropping the link.
   Buttons are therefore single assets that must read on white and on GitHub dark
