@@ -31,6 +31,9 @@ Paper and export again.
 | `avatar-512.png` | `GH 03 · Org avatar 512` | PNG `1x` → 512 × 512 |
 | `icon-positive.svg` | `GH 04 · Icon on paper 512` | hand-authored, see below |
 | `icon-reversed.svg` | `GH 03 · Org avatar 512` | hand-authored, see below |
+| `btn-email.png` | `GH 05 · Contact buttons` → `btn-email` | PNG `2x`, displayed at `height="40"` |
+| `btn-call.png` | `GH 05 · Contact buttons` → `btn-call` | PNG `2x`, displayed at `height="40"` |
+| `btn-whatsapp.png` | `GH 05 · Contact buttons` → `btn-whatsapp` | PNG `2x`, displayed at `height="40"` |
 
 The banners ship as PNG rather than SVG on purpose: GitHub's markdown pipeline
 does not embed webfonts, so text-bearing vector art would render in a fallback
@@ -41,6 +44,22 @@ Paper's SVG export wraps the design in a `foreignObject`, which GitHub strips an
 which weighs 2.4 MB. The icon is five rectangles on a 512 grid, so the file is
 transcribed by hand instead — if the icon changes in Paper, read the children's
 computed styles and update the `<rect>` coordinates to match.
+
+### Contact buttons
+
+Three constraints shape how these are built, all verified against GitHub's
+markdown pipeline:
+
+- **`tel:` links are stripped**, in HTML anchors and markdown links alike. Only
+  `https:` and `mailto:` survive. The call button therefore carries the number on
+  its face instead of being a dial link, and points at `#contact` — a bare image
+  gets auto-wrapped in a link to the raw PNG, which is worse.
+- **`<picture>` cannot go inside a link.** GitHub rewrites it to
+  `<themed-picture>` and hoists it out of the anchor, silently dropping the link.
+  So the buttons are single assets, not theme-switched pairs.
+- Because there is no theme switch, each button must read on white *and* on
+  GitHub's dark background: the accent button is filled, the other two are white
+  with a 2px ink border.
 
 `avatar-512.png` is **not** used by any page. It is the file to upload manually
 under Organisation settings → Profile picture; GitHub cannot read an avatar from
