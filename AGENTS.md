@@ -68,10 +68,10 @@ Every file here is exported from the Paper file **Studio Jocks UG**, page
 **GitHub kit**. Do not hand-edit an export — change the artboard in Paper and
 export again. Renaming or moving a file breaks the live profile immediately.
 
-Paper's SVG export wraps output in a `foreignObject`, which GitHub strips and which
-runs to megabytes. The icon SVGs are therefore hand-written from the artboard
-geometry; if the icon changes in Paper, read the children's computed styles and
-update the `<rect>` coordinates to match.
+Read `README.md` before changing any image or link. It records the exceptions to
+that pipeline and the limits of GitHub's markdown renderer — stripped `tel:` URLs,
+auto-linked bare images, and `<picture>` being hoisted out of anchors — each of
+which will silently break something if rediscovered the hard way.
 
 ## Verify rendering before pushing
 
